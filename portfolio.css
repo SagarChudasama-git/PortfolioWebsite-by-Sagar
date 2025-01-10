@@ -309,6 +309,37 @@ nav .right a span {
     flex: 8;
   }
 
+  /* Group4 */
+  .projects-section .group4 {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .projects-section .group4 .person-details4 {
+    text-align: center;
+    flex: 2;
+  }
+  
+  .projects-section .group4 .person-details4 img {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .projects-section .group4 .person-details4 p {
+    font-weight: 600;
+  }
+  
+  .projects-section .group4 .person-details4 p:last-child {
+    font-weight: normal;
+  }
+  
+  .projects-section .group4 .text4 {
+    flex: 8;
+  }
+
 
 /* SECTION 4: Contact */
 .contact-section {
@@ -405,6 +436,10 @@ nav .right a span {
     flex-direction: column;
   }
 
+  .projects-section .group4 {
+    flex-direction: column;
+  }
+
   /* SECTION 4: Contact */
   .contact-section .group {
     flex-direction: column;
@@ -461,6 +496,10 @@ nav .right a span {
   }
 
   .projects-section3 {
+    padding: 0 20px;
+  }
+
+  .projects-section4 {
     padding: 0 20px;
   }
 

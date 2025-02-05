@@ -26,6 +26,7 @@ body {
   background-color: var(--background-color);
   max-width: 1400px;
   margin: 0 auto;
+  text-align: left;
 }
 
 a {
@@ -74,6 +75,107 @@ nav .right a span {
 }
 
 /* SECTION 1: Hero */
+
+.card {
+  /* color used to softly clip top and bottom of the .words container */
+
+  padding: 1rem 2rem;
+  border-radius: 1.25rem;
+}
+
+.loader {
+  color: rgb(124, 124, 124);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: clamp(20px, 3vw, 25px);
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: auto;
+  min-height: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+}
+
+.loader p {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 40px;
+  font-family: "Caveat", serif;
+  font-weight: 200;
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+  height: 1.5em;
+}
+
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: var(--link-color);
+  animation: spin_4991 4s infinite;
+}
+
+@keyframes spin_4991 {
+  10% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
+  }
+
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  35% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
+  60% {
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
+  }
+
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -86,6 +188,7 @@ nav .right a span {
 
 .hero-section .text {
   flex: 5;
+  text-align: left;
 }
 
 .hero-section .text h2 {
@@ -136,8 +239,8 @@ nav .right a span {
 }
 
 .skills-section .text {
-  text-align: center;
-  margin-bottom: 20px;
+  text-align: left;
+  margin: 20px 0;
 }
 
 .skills-section .cells {
@@ -171,7 +274,7 @@ nav .right a span {
 
 /*Education Section*/
 .education-section {
-  padding: 0 50px;
+  padding: 0 20px;
   margin-bottom: 100px;
 }
 
@@ -187,8 +290,8 @@ nav .right a span {
   gap: 50px;
 }
 
-.education-section .education {
-  text-align: center;
+.education-section .education  {
+  text-align: left;
   flex: 2;
 }
 
@@ -202,6 +305,8 @@ nav .right a span {
 
 .education-section .education .text {
   flex: 8;
+  text-align: left;
+  margin: 20px 0;
 }
 
 /* SECTION 3: projects */
@@ -245,9 +350,9 @@ nav .right a span {
 
 .projects-section .group .text {
   flex: 8;
+  text-align: left;
 }
 
-/* Group 2 */
 .projects-section .group2 {
     display: flex;
     align-items: center;
@@ -276,9 +381,9 @@ nav .right a span {
   
   .projects-section .group2 .text2 {
     flex: 8;
+    text-align: left;
   }
 
-/* Group 3 */
 .projects-section .group3 {
     display: flex;
     align-items: center;
@@ -307,10 +412,10 @@ nav .right a span {
   
   .projects-section .group3 .text3 {
     flex: 8;
+    text-align: left;
   }
 
-  /* Group4 */
-  .projects-section .group4 {
+.projects-section .group4 {
     display: flex;
     align-items: center;
     gap: 50px;
@@ -335,11 +440,42 @@ nav .right a span {
   .projects-section .group4 .person-details4 p:last-child {
     font-weight: normal;
   }
-  
+
   .projects-section .group4 .text4 {
     flex: 8;
+    text-align: left;
   }
 
+.projects-section .group5 {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .projects-section .group5 .person-details5 {
+    text-align: center;
+    flex: 2;
+  }
+  
+  .projects-section .group5 .person-details5 img {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .projects-section .group5 .person-details5 p {
+    font-weight: 600;
+  }
+  
+  .projects-section .group5 .person-details5 p:last-child {
+    font-weight: normal;
+  }
+
+  .projects-section .group5 .text5 {
+    flex: 8;
+    text-align: left;
+  }
 
 /* SECTION 4: Contact */
 .contact-section {
@@ -359,6 +495,7 @@ nav .right a span {
 .contact-section .group .text {
   flex: 3;
   margin-top: 20px;
+  text-align: left;
 }
 
 .contact-section .group form {
@@ -393,6 +530,35 @@ nav .right a span {
   filter: brightness(.9);
 }
 
+@media screen and (max-width: 768px) {
+  .loader {
+    font-size: clamp(18px, 4vw, 22px);
+    padding: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .loader p {
+    text-align: center;
+  }
+  
+  .words {
+    min-width: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .loader {
+    font-size: 30px;
+    padding: 6px;
+  }
+  
+  .words {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 @media (max-width: 850px) {
   /* SECTION 1: Hero */
   .hero-section .text h2 {
@@ -424,6 +590,14 @@ nav .right a span {
     text-align: center;
   }
 
+  .projects-section4 {
+    text-align: center;
+  }
+
+  .projects-section5 {
+    text-align: center;
+  }
+
   .projects-section .group {
     flex-direction: column;
   }
@@ -437,6 +611,10 @@ nav .right a span {
   }
 
   .projects-section .group4 {
+    flex-direction: column;
+  }
+
+  .projects-section .group5 {
     flex-direction: column;
   }
 
@@ -496,10 +674,6 @@ nav .right a span {
   }
 
   .projects-section3 {
-    padding: 0 20px;
-  }
-
-  .projects-section4 {
     padding: 0 20px;
   }
 

@@ -16,6 +16,10 @@
   <title>Portfolio Sagar</title>
 </head>
 <body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <img src="StartLoader.gif" alt="Loading...">
+  </div>
 
   <!-- NAVBAR -->
   <nav>
@@ -224,5 +228,25 @@
       </div>
     </section>
   </main>
+  <!-- Add this before closing body tag -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const preloader = document.getElementById('preloader');
+      
+      // Get the duration of the GIF (adjust this to match your GIF's duration)
+      // For example, if your GIF is 3 seconds, use 3000
+      const gifDuration = 4200; // 3 seconds in milliseconds
+      
+      // Wait for the GIF to complete one cycle
+      setTimeout(function() {
+        preloader.classList.add('fade-out');
+        
+        // Remove preloader from DOM after fade animation completes
+        setTimeout(function() {
+          preloader.style.display = 'none';
+        }, 500); // 500ms matches the transition duration in CSS
+      }, gifDuration);
+    });
+  </script>
 </body>
 </html>
